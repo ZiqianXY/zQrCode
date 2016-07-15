@@ -1,3 +1,4 @@
+__all__ = ['QrGenerator', 'QrRecognition', 'test']
 
 try:
     from PIL import Image

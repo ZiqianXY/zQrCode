@@ -12,7 +12,7 @@ import numpy as np
 from collections import Counter
 
 
-def getQrCodeInfo(imgPath):
+def getQrData(imgPath):
     """
     get information in a qr-code
     :param imgPath: the path of qr-code image
@@ -43,7 +43,7 @@ def getQrCodeInfo(imgPath):
     return data if data else None
 
 
-def getQrLineInfo(imgPath):
+def getSlopeDegree(imgPath):
     """
     get the main lines info
     :param imgPath: path of the source image
@@ -99,8 +99,8 @@ def resolve(imgPath):
     :param imgPath: path of the source image
     :return: [data, output_path, degree_of_image_rotate]
     """
-    data = getQrCodeInfo(imgPath)
-    degree, path = getQrLineInfo(imgPath)
+    data = getQrData(imgPath)
+    degree, path = getSlopeDegree(imgPath)
     return [data, degree, path] if data else None
 
 
